@@ -66,3 +66,17 @@ Local `run.param` files are available under `src/` for both docking protocols:
 
 **Fares Ibrahim**  
 Structural Bioinformatics | Protein–Protein Docking | Cancer Systems Biology
+
+---
+
+## 🧬 Residue Interaction Mapping
+
+To better understand the docking interface, a residue-level contact map was generated using PDBsum. This helps identify:
+
+- Hydrogen bonding residues
+- Salt bridges
+- Hydrophobic patches across the SAMHD1–SOX11 interface
+
+| Interaction Interface Map |
+|---------------------------|
+| ![](figures/residue_contact_map.png) |
