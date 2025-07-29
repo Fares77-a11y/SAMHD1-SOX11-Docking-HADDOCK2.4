@@ -1,47 +1,49 @@
-# SAMHD1-SOX11-Docking-HADDOCK2.4
-Protein–protein docking of SAMHD1 and SOX11 using HADDOCK 2.4: comparative analysis of random vs. centroid-based ligand placement, cluster scoring, and PyMOL/PDBsum interaction mapping.
+# 🧬 SAMHD1–SOX11 Docking Analysis using HADDOCK
 
-# 🔬 SAMHD1–SOX11 Docking Analysis (HADDOCK 2.4)
-
-This project compares two protein–protein docking strategies (random vs. centroid-restrained) for the SAMHD1–SOX11 complex using the HADDOCK 2.4 platform. Structural insights were supported by interface analysis via PDBsum and PyMOL visualization.
+This repository contains an in-depth structural analysis of the protein–protein interaction between **SAMHD1** and **SOX11**, using docking simulations performed via the **HADDOCK** webserver. Two docking approaches were used:
+- **Random ligand placement**
+- **Centroid-restrained docking**
 
 ---
 
-## 🧪 Overview
+## 📌 Project Goals
 
-- **Proteins**: SAMHD1 and SOX11 (renumbered chains, preprocessed via PyMOL and PDB-tools)
-- **Docking Tool**: HADDOCK 2.4 (https://wenmr.science.uu.nl/haddock2.4/)
-- **Protocols**:
-  - Random ligand placement
-  - Centroid-restrained placement (interface-based)
-- **Analysis**:
-  - Cluster scoring
-  - PDBsum-based interaction breakdown (H-bonds, salt bridges, hydrophobic patches)
-  - Visualized with cartoon overlays and interface plots
+- Model SAMHD1–SOX11 complexes using HADDOCK
+- Compare docking performance between random and centroid-based placements
+- Visualize unbound and docked structures
+- Assess binding quality via BSA, electrostatic/VdW energies, and Z-scores
 
 ---
 
 ## 📊 Results Summary
 
-| Cluster        | HADDOCK Score | Buried Surface Area (Å²) | Electrostatic Energy | VdW Energy | Z-Score |
-|----------------|----------------|----------------------------|----------------------|------------|---------|
-| Random (200)   | -110.2         | 1622.4                     | -124.7               | -44.3      | -1.9    |
-| Center (361)   | -98.4          | 1450.1                     | -110.3               | -41.8      | -1.3    |
+| Cluster       | HADDOCK Score | Buried Surface Area (Å²) | Electrostatic Energy | VdW Energy | Z-Score |
+|---------------|----------------|---------------------------|----------------------|------------|---------|
+| Random (200)  | -110.2         | 1622.4                    | -124.7               | -44.3      | -1.9     |
+| Center (361)  | -98.4          | 1450.1                    | -110.3               | -41.8      | -1.3     |
 
 ---
 
-## 🧬 Structural Visualizations
+## 🔬 Structural Visualizations
 
-| Molecule | View |
-|----------|------|
-| SAMHD1 (Unbound) | ![](figures/unbound_SAMHD1.png) |
-| SOX11 (Unbound)  | ![](figures/unbound_SOX11.png) |
-| Docked Complex (Random) | ![](figures/cluster200_docked.png) |
-| Docked Complex (Centroid) | ![](figures/cluster361_docked.png) |
+| Molecule               | View                                               |
+|------------------------|----------------------------------------------------|
+| SAMHD1 (Unbound)       | ![SAMHD1](figures/SAMHD1_unbound.png)              |
+| SOX11 (Unbound)        | ![SOX11](figures/SOX11_unbound.png)                |
+| Docked Complex (Random)| ![Random](figures/cluster200_docking_cartoon.png)  |
+| Docked Complex (Centroid)| ![Center](figures/cluster361_docking_cartoon.png) |
 
 ---
 
-## 📊 Cluster Score Tables
+### 🧬 Residue Mapping
+
+> Visualizes interface residues at the predicted protein–protein contact zone.
+
+![Residue Mapping](figures/pdbsum_cluster361_interactions.png)
+
+---
+
+## 📂 Cluster Score Tables
 
 - [random_haddock_clusters.tsv](results/random_haddock_clusters.tsv)
 - [centered_haddock_clusters.tsv](results/centered_haddock_clusters.tsv)
@@ -54,29 +56,43 @@ Each file contains:
 
 ---
 
-## ⚙️ HADDOCK Terminal Setup
+## 🖥️ HADDOCK Terminal Setup
 
-Local `run.param` files are available under `src/` for both docking protocols:
-- `run_random.param`
-- `run_center.param`
+```bash
+cd /C/Users/fares/HADDOCK
+python2 haddock2.4.py --params job_params_SAMHD1xSOX11_center.json
+python2 haddock2.4.py --params job_params_SAMHD1xSOX11_random.json
+```
+
+---
+
+## 📁 Project Structure
+
+```
+SAMHD1-SOX11-Docking-Analysis/
+├── data/
+│   ├── job_params_SAMHD1xSOX11_random.json
+│   └── job_params_SAMHD1xSOX11_center.json
+├── figures/
+│   ├── SAMHD1_unbound.png
+│   ├── SOX11_unbound.png
+│   ├── cluster200_docking_cartoon.png
+│   ├── cluster361_docking_cartoon.png
+│   └── pdbsum_cluster361_interactions.png
+├── results/
+│   ├── random_haddock_clusters.tsv
+│   └── centered_haddock_clusters.tsv
+├── src/
+│   └── prepare_structures_and_docking.md
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
 ## 👨‍💻 Author
 
 **Fares Ibrahim**  
-Structural Bioinformatics | Protein–Protein Docking | Cancer Systems Biology
-
----
-
-## 🧬 Residue Interaction Mapping
-
-To better understand the docking interface, a residue-level contact map was generated using PDBsum. This helps identify:
-
-- Hydrogen bonding residues
-- Salt bridges
-- Hydrophobic patches across the SAMHD1–SOX11 interface
-
-| Interaction Interface Map |
-|---------------------------|
-| ![](figures/residue_contact_map.png) |
+Bioinformatician | Molecular Docking | Structural Biology  
+🔗 [LinkedIn](https://www.linkedin.com) | 🌐 [GitHub](https://github.com/Fares77-a11y)
