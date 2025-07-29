@@ -39,7 +39,7 @@ This repository contains an in-depth structural analysis of the protein–protei
 
 > Visualizes interface residues at the predicted protein–protein contact zone.
 
-![Residue Mapping](Figures/pdbsum_cluster361_interactions.png)
+![Residue Mapping](Figures/pdbsum_cluster361_interactions.SVG)
 
 ---
 
