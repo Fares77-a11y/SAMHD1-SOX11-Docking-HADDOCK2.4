@@ -28,10 +28,10 @@ This repository contains an in-depth structural analysis of the protein–protei
 
 | Molecule               | View                                               |
 |------------------------|----------------------------------------------------|
-| SAMHD1 (Unbound)       | ![SAMHD1](figures/SAMHD1_unbound.png)              |
-| SOX11 (Unbound)        | ![SOX11](figures/SOX11_unbound.png)                |
-| Docked Complex (Random)| ![Random](figures/cluster200_docking_cartoon.png)  |
-| Docked Complex (Centroid)| ![Center](figures/cluster361_docking_cartoon.png) |
+| SAMHD1 (Unbound)       | ![SAMHD1](Figures/SAMHD1_unbound.png)              |
+| SOX11 (Unbound)        | ![SOX11](Figures/SOX11_unbound.png)                |
+| Docked Complex (Random)| ![Random](Figures/cluster200_docking_cartoon.png)  |
+| Docked Complex (Centroid)| ![Center](Figures/cluster361_docking_cartoon.png) |
 
 ---
 
@@ -39,7 +39,7 @@ This repository contains an in-depth structural analysis of the protein–protei
 
 > Visualizes interface residues at the predicted protein–protein contact zone.
 
-![Residue Mapping](figures/pdbsum_cluster361_interactions.png)
+![Residue Mapping](Figures/pdbsum_cluster361_interactions.png)
 
 ---
 
@@ -76,7 +76,7 @@ SAMHD1-SOX11-Docking-Analysis/
 │  ├── job_params_SAMHD1xSOX11_random.json   # HADDOCK web run config (random)
 │  ├── job_params_SAMHD1xSOX11_center.json   # HADDOCK web run config (center)
 
-├── figures/
+├── Figures/
 │   ├── SAMHD1_unbound.png
 │   ├── SOX11_unbound.png
 │   ├── cluster200_docking_cartoon.png
