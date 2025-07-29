@@ -1,0 +1,27 @@
+#
+# HADDOCK 2.4 local run.param file
+# Protocol: random
+#
+
+HADDOCK_DIR=C:/Users/fares@Fares/HADDOCK
+N_COMP=2
+
+STRUCTURE_1=../data/4bzc_clean.pdb
+STRUCTURE_2=../data/6t78_clean.pdb
+PDB_FILE1_CHAINID=A
+PDB_FILE2_CHAINID=B
+
+PROJECT_DIR=../runs/random_docking
+PARAM_DIR=./params
+
+AMBIG_TBL=../data/random_ambig.tbl
+UNAMBIG_TBL=../data/random_unambig.tbl
+AIR_TABLE=yes
+
+N_STRUCTURES=1000
+N_STRUCTURES_IT0=1000
+N_STRUCTURES_IT1=200
+
+RANDOM_SEED=960625
+
+! Optional restraints and parameter overrides go here.
