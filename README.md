@@ -86,6 +86,8 @@ SAMHD1-SOX11-Docking-Analysis/
 │   ├── random_haddock_clusters.tsv
 │   └── centered_haddock_clusters.tsv
 ├── src/
+│   └── cluster200_1.pdb
+│   └── cluster361_1.pdb
 │   └── run_random.param                   # Terminal config: random protocol
 │   └── run_center.param                   # Terminal config: centroid protocol
 └── prepare_structures_and_docking.md  # Step-by-step: renumbering, restraints, chain fix
