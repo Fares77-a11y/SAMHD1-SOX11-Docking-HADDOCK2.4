@@ -71,8 +71,11 @@ python2 haddock2.4.py --params job_params_SAMHD1xSOX11_random.json
 ```
 SAMHD1-SOX11-Docking-Analysis/
 ├── data/
-│   ├── job_params_SAMHD1xSOX11_random.json
-│   └── job_params_SAMHD1xSOX11_center.json
+│  ├── 4bzc_SAMHD1_clean.pdb              # Cleaned SAMHD1 (chain A,B,C,D renumbered)
+│  ├── 6t78_SOX11_model_clean.pdb            # Cleaned SOX11 (HMG domain, chain E)
+│  ├── job_params_SAMHD1xSOX11_random.json   # HADDOCK web run config (random)
+│  ├── job_params_SAMHD1xSOX11_center.json   # HADDOCK web run config (center)
+
 ├── figures/
 │   ├── SAMHD1_unbound.png
 │   ├── SOX11_unbound.png
